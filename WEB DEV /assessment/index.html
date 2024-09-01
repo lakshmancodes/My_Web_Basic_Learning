@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>20MIS0204</title>
+<title>NPS Calculator</title>
+<style type="text/css">
+table
+{
+display: none;
+}
+</style>
+</head>
+<body>
+<h1>Nps Calculator</h1>
+<form action="">
+
+<label for="name">Name</label>
+<input type="name" id="name" name="name" max_length="15"
+required>
+<br>
+<label for="amount" >Amount</label>
+<input type="number" name="amount" id="amount" required>
+<br>
+<label for="date">Date</label>
+<input type="date" id="date" required>
+<br>
+<label for="age">Age: </label>
+<input type="age" id="age" required>
+<br>
+
+<input type="button" id="submit" value="pension">
+<br>
+</form>
+<table>
+    <th>Name</th>
+<th>Amount</th>
+<th>Date Of Birth</th>
+<th>Age</th>
+<th>principalAmount</th>
+<th>corporous Amount</th>
+<th>pensionAmount</th>
+<tr>
+    <td>Lakshman</td>
+    <td>8332</td>
+
+</tr>
+</table>
+<table id="table" border="2px">
+<tr>
+<th></th>
+<th>Name</th>
+<th>Amount</th>
+<th>Date Of Birth</th>
+<th>Age</th>
+<th>principalAmount</th>
+<th>corporous Amount</th>
+<th>pensionAmount</th>
+</tr>
+</table>
+<script type="text/javascript">
+document.getElementById("submit").onclick=function()
+{
+document.getElementById("table").style.display="block";
+var table = document.getElementById("table");
+var row = table.insertRow(-1);
+var Name = row.insertCell(0);
+var Amount = row.insertCell(1);
+var Date = row.insertCell(2);
+var Age = row.insertCell(3);
+var principalAmount=row.insertCell(4);
+var corporusAmount=row.insertCell(5);
+var principalAmount=row.insertCell(6);
+Name.innerHTML = document.getElementById("name").value;
+Amount.innerHTML = document.getElementById("amount").value;
+Date.innerHTML = document.getElementById("date").value;
+Age.innerHTML = document.getElementById("age").value;
+function nps(){
+var name1=parseInt(document.getElementById("name").value);
+var amount1=parseInt(document.getElementById("amount").value);
+var DateOfBirth=parseInt(document.getElementById("date").value);
+var age=parseInt(document.getElementById("age").value);
+if(age>60){
+var interest=0.08*amount;
+}
+else{
+    var interest=0;
+}
+var principalAmount=amount*12*age;
+var totalAmount=principalAmount(1+interest/100);
+var corporusAmount=totalAmount*0.6;
+var pensionAmount=(totalAmount*0.4)*180;
+}
+
+return false;
+}
+</script>

@@ -1,0 +1,12 @@
+body{
+    background: blue url("11.png") no-repeat top;
+}
+p{
+    text-indent: 15px;
+    font: arial absolute-size lighter inherit;
+    color: brown;
+}
+h4{
+    text: RED right underline;
+    color: red;
+}

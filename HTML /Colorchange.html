@@ -1,0 +1,31 @@
+<html>
+    <head>
+</head>
+<body id="body">
+<form method="post" action="something.php" name="colorchange" align="center"> 
+<div>
+<label>Background Colour:</label><br /><br /> <select name="bgcolor" id="bgcolor">
+<option value="red">Red</option>
+<option value="yellow">Yellow</option> <option value="blue">Blue</option>
+<option value="green">Green</option> </select>
+</div>
+<br /><br />
+<div>
+<label>Font-Style:</label><br />
+<input type="text" name="font" id="font" /> </div>
+<br /><br />
+<div>
+<label>Size:</label><br />
+<input type="number" name="size" id="size"/> </div>
+<br /><br />
+<div>
+<button type="button" onclick="change()">Okay</button> </div>
+</form>
+<script> function
+change() 
+{
+    var body = document.getElementById('body'); var x = document.getElementById("bgcolor") body.style.backgroundColor = x.value; var y = document.getElementById("font") body.style.fontStyle = y.value; var z = document.getElementById("size") body.style.fontSize = z.value;
+}
+</script>
+</body>
+</html>

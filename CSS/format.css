@@ -1,0 +1,15 @@
+h1{
+    background-color: aqua;color: blue;
+    text-align: center ;
+}
+p{
+    background-color: black;color: RED;
+    font-size: 40; text-align: center;
+}
+form{
+    background-color: yellow;border: 10px;
+}
+body
+{
+    background:  url("tree.png") no-repeat center;
+}

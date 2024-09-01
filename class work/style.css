@@ -1,0 +1,44 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    margin-top: 30px;
+    display: flex;
+    height: 100px;
+    width: 45%;
+    background-color: #1F92D1;
+    padding: 20px;
+
+}
+.txt1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    width: 25%;
+    text-align: left;
+    color: white;
+}
+.title img{
+    margin-left: 20px;
+}
+.txt2{
+    color: white;
+    margin-left: 60px; 
+
+}
+.txt2 p{
+    width: 200px;
+}
+.txt2 hr{
+    margin-top: 10px;
+}
+.txt2 h3{
+    margin-top: 10px;
+}

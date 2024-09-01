@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<style>
+*{
+color: rgba(0, 0, 0, 0.973);
+}
+</style>
+</head>
+<body>
+<h3>NAME: LAKSHMAN NARAHARISHETTI <br> REG. NO: 20MIS0204</h3>
+<form name="myform">
+<fieldset>
+<legend>PIZZA SHOP</legend>
+<table border="2" background="img.jpg">
+<tr>
+<th colspan="2">Pizza Shop 2.0</th>
+</tr>
+<tr>
+<th align="left">Name</th>
+<td><input type="text" name="xyz"></td>
+</tr>
+<tr>
+<th align="left">Pizza Topping</th>
+<td>
+<input type="radio" name="topping" >Supreme <br>
+<input type="radio" name="topping" >Vegetarian <br>
+<input type="radio" name="topping" >Hawaiian <br>
+</td>
+</tr>
+<tr>
+<th align="left">Pizza Sauce</th>
+<td>
+<select name="flakes">
+<option></option>
+<option>Tomato</option>
+<option >Chilli</option>
+</select>
+</td>
+</tr>
+<tr>
+<th align="left">Optional Extras</th>
+<td>
+<input type="checkbox" name="extras">Extra Cheese
+<input type="checkbox" name="extras" >Gluten Free Base
+</td>
+</tr>
+<tr>
+<th colspan="2">
+<p align="left">Delivery Instructions:</p>
+<textarea cols="50" rows="3" name="abc"></textarea>
+</th>
+</tr>
+<th>
+<input type="submit" onclick="check()" value="Send my Order">
+</th>
+</table>
+
+</fieldset>
+</form>
+<script>
+function check(){
+var x=document.myform.xyz.value;
+var y=document.myform.topping;
+var z=document.myform.flakes;
+var l=document.myform.extras;
+var m=document.myform.abc.value;
+if(test1(x)){
+if(test2(y)){
+if(test3(z)){
+if(test4(l)){
+if(test5(m)){
+alert("Thank you !! Have a nice day 🙏🙏")
+return true;
+}
+}
+}
+}
+}
+else{
+return false;
+}
+}
+function test1(x){
+if(x.length==0){
+alert("Enter the name")
+}
+else{
+return true;
+}
+}
+function test2(y){
+for(var i=0;i<y.length;i++){
+if(y[i].checked){
+return true;
+break;
+}
+}
+alert("Choose the topping ")
+return false;
+}
+function test3(z){
+if(z.value==""){
+alert("Select the Sauce");
+return false;
+}
+else{
+return true;
+}
+}
+function test4(l){
+for(var i=0;i<l.length;i++){
+if(l[i].checked){
+return true;
+break;
+}
+}
+alert("Choose the Extra ")
+return false;
+}
+function test5(m){
+if(m.length==0){
+alert("Enter the Address")
+}
+else{
+return true;
+}
+}
+</script>
+</body>
+</html>

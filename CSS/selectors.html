@@ -1,0 +1,225 @@
+<!--<html>
+    <head>
+        <title> ID SELECTORS </title>
+        <style>
+            #o1{
+                text-align: center;
+                background-color: pink;
+            }
+            #o2{
+                text-align: right;
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body bgcolor="green">
+        <p id="o1">I AM USING THE ID SELECTOR</p>
+        <p id="o1">I am using the 02 id selector</p>
+    </body>
+</html>
+<html>
+    <head>
+        <title>CLASS SELECTORS</title>
+        <style>
+            .c1{
+                color:lime;background-color: lightcoral;
+                font-size: 30; text-align: center;
+            }
+            .c2{
+                color:red; background-color: antiquewhite;
+                font-size: 25; text-align: center;
+            }
+        </style>
+    </head>
+    <body bgcolor="black">
+        <p class="c1">We are the people of the Universe </p>
+        <h1 class="c2">The World is Hungry and the TeCH eats it</h1>
+    </body>
+</html>
+<html>
+    <head>
+        <title>ELEMENT/TAG SELECTOR</title>
+        <style>
+            h1{
+                text-align: center;
+                font-size: 20;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body bgcolor="red">
+        <h1>I have used element selector </h1>
+        <h1>I have used tag selector </h1>
+    </body>
+</html>
+<html>
+    <head>
+        <title>ATTRIBUTE SELECTOR</title>
+        <style>
+            h2[align=center]
+            {
+                font-size: 30;background-color: aqua;
+                text-align: center;color: azure;
+            }
+            h1[align=right]
+            {
+                font-size : 30;background-color: black;
+                text-align: center;color: azure;
+            }
+        </style>
+    </head>
+    <body bgcolor="red">
+        <h2  align="center">Hello Everyone !!!</h2>
+        <h1 align="right">I am Lakshman imma tryna learn WEBDEV</h1>
+    </body>
+</html>
+<html>
+    <head>
+        <title>UNIVERSAL SELECTOR</title>
+        <style>
+            *{
+                color:white;
+                background-color: black;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <p>WHY ARE YOU SO BEAUTIFUL</p>
+    <h1>You never know why you are here but you must just be</h1>
+    <div>
+        <h1 align="center">I LOVE YOU </h1>
+        <p align="center">THIS is A Content of P tag</p>
+    </div>
+    </body>
+</html>
+<html>
+    <head>
+        <title>COMBINATOR SELECTOR/MDESCENDANT SELECTOR</title>
+        <style>
+            div h2{
+                background-color: blueviolet;
+                font-size: 25;
+                text-align: Center;
+                color: lime;
+            }
+            p{
+                background-color: azure;
+                color: brown;
+                text-align: center;
+                font-size: 25;
+            }
+        </style>
+    </head>
+    <body bgcolor="orange">
+        <h1>I am LAKSHMAN </h1>
+        <p>I AM A University Student</p>
+        <div>
+            <h2>I am Studying in VIT VELLORE</h2>
+            <P>i Live in Chennai </P>
+            <h1>The best thing is that I have the Best Of Best in everything</h1>
+        </div>
+        <h1>I am Happy for what i am now..</h1>
+        <p><i>Being satisfied is the key thing of BEING HAPPY</i></p>
+        <div><h2>SO live Happily Enjoy to the FULLEST</h2></div>
+        <h2>BYE GUYSS !!!</h2>
+    </body>
+</html>-->
+<!--<HTML>
+    <head>
+        <title>CHILD SELECTOR</title>
+        <style>
+            div > p{
+                background-color: lime;
+                font-size: 25;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h2>Child Selector</h2>
+
+        <p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section>
+                // not Child but Descendant 
+                <p>Paragraph 3 in the div (inside a section element).</p>
+            </section>
+            <p>Paragraph 4 in the div.</p>
+        </div>
+
+        <p>Paragraph 5. Not in a div.</p>
+        <p>Paragraph 6. Not in a div.</p>
+    </body>
+</HTML>
+<HTML>
+    <head>
+        <title>ADJACENT SIBLINGS SELECTOR</title>
+        <style>
+            div  p{
+                background-color: lime;
+                font-size: 25;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Adjacent Sibling Selector</h2>
+
+        <p>The + selector is used to select an element that is directly after another specific element.</p>
+        <p>The following example selects the first p element that are placed immediately after div elements:</p>
+        
+        <div>
+          <p>Paragraph 1 in the div.</p>
+          <p>Paragraph 2 in the div.</p>
+        </div>
+        
+        <p>Paragraph 3. After a div.</p>
+        <p>Paragraph 4. After a div.</p>
+        
+        <div>
+          <p>Paragraph 5 in the div.</p>
+          <p>Paragraph 6 in the div.</p>
+        </div>
+
+        <p>Paragraph 7. After a div.</p>
+        <p>Paragraph 8. After a div.</p>
+    </body>
+</HTML>-->
+<html>
+    <head>
+        <title>GENERAL SIBLINGS SELECTOR</title>
+        <style>
+            div ~ p{
+                background-color: lime;
+                font-size: 25;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>General Sibling Selector</h2>
+        
+        <p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+        
+        <p>Paragraph 1.</p>
+        
+        <div>
+          <p>Paragraph 2.</p>
+        </div>
+        
+        <p>Paragraph 3.</p>
+        <code>Some code.</code>
+        <p>Paragraph 4.</p>
+        
+    </body>
+</html>
+
+
+
+
+
+
+

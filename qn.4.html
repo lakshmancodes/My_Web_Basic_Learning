@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student form</title>
+<style>
+.table{
+border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+    <h3>NAME: LAKSHMAN NARAHARISHETTI <br> REG. NO: 20MIS0204</h3>
+<form name="myform">
+<fieldset>
+<legend>Student Registraton Form</legend>
+<table border="2px" class="table">
+<tr>
+<th align="left">Name</th>
+<th align="left"><input type="text" name="na"></th>
+</tr>
+<tr>
+<th align="left">Registration No.</th>
+<th align="left"><input type="text" name="reg"></th>
+</tr>
+<tr>
+<th align="left">Date Of Birth</th>
+<th align="left"><input type="date"></th>
+</tr>
+<tr>
+<th align="left">Program</th>
+<th align="left"><textarea cols="40" rows="5"></textarea></th>
+</tr>
+<tr>
+<th align="left">E-mail Id</th>
+<th align="left"><input type="email" name="mail"></th>
+</tr>
+<tr>
+<th align="left">Temporary Address</th>
+<th align="left"><textarea cols="40" rows="7"
+name="temporary"></textarea></th>
+</tr>
+<tr>
+<th colspan="2"><input type="checkbox" id="tempo" name="temp"
+onclick="address()">Permanent Address same as temporary</th>
+</tr>
+<tr>
+<th align="left">Permanent Address</th>
+<th><textarea cols="40"
+rows="7" name="permanent"></textarea></th>
+</tr>
+<tr>
+<th align="left">Phone Number</th>
+<th align="left"><input type="number" name="tel"></th>
+</tr>
+</table>
+</fieldset>
+</form>
+<input type="submit" value="submit" onclick="validate()">
+<script>
+function validate(){
+var y=document.myform.reg.value;
+var x=document.myform.tel.value;
+var z=document.myform.na.value;
+var k=document.myform.mail.value;
+if(test3(z)){
+if(test2(y)){
+if(test4(k)){
+if(test1(x)){
+alert("THANK YOU for filling form!!")
+return true;
+}
+}
+}
+}
+else{
+return false;
+}
+}
+function test1(x){
+if(x.length==0){
+alert("Enter the mobile number")
+}
+else{
+var phoneno = /^\d{10}$/;
+if((x.match(phoneno))){
+return true;
+}
+else{
+alert("Please Enter valid phone number");
+return false;
+}
+}
+}
+function test2(y){
+if(y.length==0){
+alert("Enter the registraton number");
+}
+else{
+var regi=/^\w{9}$/;
+if(y.match(regi)){
+return true
+}
+else{
+alert("Enter valid registration number");
+}
+}
+}
+function test3(z){
+var letters = /^[A-Za-z]+$/;
+if(z.length==0){
+alert("Enter the name")
+}
+else{
+if(z.match(letters)){
+return true;
+}
+else{
+alert("Enter only character in name");
+return false;
+}
+}
+}
+function test4(k){
+var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+if(k.match(mailformat)){
+return true;
+}
+alert("not a valid email id");
+return false;
+}
+function address(){
+var g=document.myform.temp.checked;
+var b=document.myform.permanent;
+var c=document.myform.temporary;
+if(g == true){
+b.value=c.value;
+}
+else{
+b.value="";
+}
+}
+</script>
+</body>
+</html>

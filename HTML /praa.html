@@ -1,0 +1,69 @@
+<html>
+<head><title>  20MIS0093</title>
+    <style type="text/css">
+        table
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body bgcolor=pink>
+ <div> <h2><center><hr>COVID 19 Patient's Form<hr></center>
+ <center>Form</center></h2>
+ <form action=""><center>
+
+    
+   Patient id :<input type="text" name="id" required /><br><br>
+   Patient's Name :<input type="text" name="name"/><br><br>
+   Place :<input type="text" name="place" /><br> <br>
+    Age :<input type="textbox" name= "age" ><br><br>
+    Sex: <input type="textbox" name= "sex" ><br><br>
+	
+    Symptoms:
+    <input  id="symptoms">
+    <input type="radio" name= "" value="Slight">Slight
+     <input type="radio" name= "moderate" value="">Moderate
+     <input type="radio" name= "Severe" value="">Severe<br><br>
+	
+     <input type="button" id="submit" value="Submit">
+     <br> 
+    </form>
+ <table id="table" border="2px">
+            <tr>
+                <th>Patient ID</th>
+                <th></th>
+                <th>Patient Name</th>
+                <th>Place</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Symptoms</th>
+            </tr>
+        </table>
+    
+        <script type="text/javascript">
+            
+            document.getElementById("submit").onclick=function()
+            {
+                document.getElementById("table").style.display="block";
+                
+                var table = document.getElementById("table");
+                var row = table.insertRow(-1);
+                var p_id = row.insertCell(0);
+                var p_name = row.insertCell(1);
+                var place = row.insertCell(2);
+                var age = row.insertCell(3);
+                var sex = row.insertCell(4);
+                var symptoms = row.insertCell(5);
+                p_id.innerHTML = document.getElementById("id").value;
+                p_name.innerHTML = document.getElementById("name").value;
+                Place.innerHTML = document.getElementById("place").value;
+                age.innerHTML = document.getElementById("age").value;
+                Sex.innerHTML = document.getElementById("sex").value;
+                Symptoms.innerHTML = document.getElementById("symptoms").value;
+                
+                return false;
+            }
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<style> 
+th,td{
+font-size:25px;
+}
+table {
+    border: 3px solid black;
+}
+</style>
+<script>
+function fun1(){
+var x=document.getElementById(" from1" ).value; var y=document.getElementById(" to1" ).value;
+var z=document.getElementById(" passenger" ).value; if (z=="")
+{
+alert(" enter number of passengers" ); return false;
+}
+if (z>0 && z<=5)
+{
+document.getElementById(" a").innerHTML=" your ticket f rom "+x+" to"+y+" conf irmed. " ;
+}
+else
+{
+alert(" ticketsnot available" );
+}
+}
+</script>
+</head>
+<body bgcolor="#F582A7" >
+<f orm>
+<table border=" 1" align=" center" cellpadding =" 10" cellspacing =" 10">
+<tr>
+<td>From</td>
+<td><input type=" text" id=" f rom1" required /></td>
+</tr>
+<tr>
+<td>To</td>
+<td><input type=" text" id=" to1" required /></td>
+</tr>
+<tr>
+<td>Train Name</td>
+<td>
+<Select name=" dropdown" required>
+<option value=" shatapdhi Express" >shatapdhi Expresspress</option>
+<option value=" Benguluru Xpress">Benguluru Xpress</option>
+<option value=" Narayapur Express" >Narayapur Express</option></select></td>
+</tr>
+<tr>
+<td>Couch Number</td>
+<td>
+<Select required>
+<option value=" s1" > s1 </option>
+<option value=" s2" > s2 </option>
+<option value=" s3" > s3 </option></select></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><input type=" Date" name=" Date" required /></td>
+</tr>
+<tr>
+<td>Timming</td>
+<td><input type=" text" name=" Timming" required /></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td>
+<Select name=" dropdown" required >
+<option value=" male" > male </option>
+<option value=" female" > female </option>
+</select></td>
+</tr>
+<tr>
+<td>No of passenger</td>
+<td><input type=" text" id=" passenger" required /></td>
+</tr>
+<tr>
+<td align=" center">
+<input type="button" name=" submit" value=" submit" />
+</td>
+<td align=" center">
+<input type="button" name=" reset" value=" reset" />
+</td>
+</tr>
+<tr>
+<td colspan=" 2" align=" center">
+<button onclick=" fun1()">Confirm</button><br/>
+<p id=" a"></p>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
